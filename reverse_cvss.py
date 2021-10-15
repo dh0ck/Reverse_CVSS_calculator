@@ -212,11 +212,14 @@ a7 = 0 # av_impact_vals
 
 for arg in sys.argv:
     if '-h' in arg or 'help' in arg:
+        print('\n\n----------- CVSS reverse calculator ----------\n')
         print('Enter target CVSS to obtain possible vectors that produce it.')
         print('An optional second argument specifies the number or desired results.')
-        print('Example: python3 reverse_cvss.py 4.3 15')
-        print('This example prints 15 CVSS vectors that yield a result of 4.3 or similar')
-        print('Running the script without arguments asks interactively for a CVSS')
+        print('Example: python3 reverse_cvss.py 4.3 15\n')
+        print('This example prints 15 CVSS vectors that yield a result of 4.3 or similar\n')
+        print('Running the script without arguments asks interactively for a CVSS\n')
+        print('\n----------------------------------------------\n')
+        sys.exit()
 
 if len(sys.argv) == 1:
     target = float(input("Enter target CVSS\n"))
